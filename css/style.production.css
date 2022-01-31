@@ -1,0 +1,341 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+body {
+	background-color: #F5F5F5;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+/*This is added to set the width value for every element to include their padding and border values*/
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+a {
+	color: #357b70;
+}
+
+a:visited {
+	color: #05676e;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+}
+
+a:active {
+	color: #489c79;
+}
+
+.profile__portrait {
+	float: left;
+	width: 250px;
+	margin-right: 40px;
+	border-radius: 50%;
+}
+
+.page-footer {
+	clear: both;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	text-align: center;
+}
+
+.profile {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.page-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	padding: 20px;
+}
+
+.page-header__item {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 200px;
+	        flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	text-align: right;
+}
+
+.navigation-list {
+	list-style-type: none;
+}
+
+.navigation-list li {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.navigation-list__item--active {
+	text-decoration: none;
+}
+
+.work-header {
+	text-align: center;
+}
+
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+	.grid {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
+	}
+
+	.grid__item {
+		background-color: lightgray;
+		padding: 15px;
+		width: auto;
+		margin: 0;
+	}
+	.grid__item:last-child {
+		-ms-grid-column: 3;
+		grid-column: 3 / 3;
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
+		grid-row: 1 / 3;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.grid {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+	}
+}
+
+@media all and (min-width:  500px) and (max-width: 750px) {
+	.grid {
+		-ms-grid-columns: 1fr 20px 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.grid {
+		grid-gap: 10px;
+	}
+	.grid__item:last-child {
+		grid-column: auto / auto;
+		grid-row: auto / auto;
+	}
+	h1 {
+		font-size: 22px;
+	}
+}
+
+.button {
+	border: none;
+	display: inline-block;
+	font-family: inherit;
+
+	/* styles the button */
+	background-color: #357b70;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+
+	/* width of the border, type, color */
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	-webkit-transition: 0.2s opacity;
+	-o-transition: 0.2s opacity;
+	transition: 0.2s opacity;
+}
+
+button {
+	border: none;
+	display: inline-block;
+	font-family: inherit;
+
+	/* styles the button */
+	background-color: #357b70;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+
+	/* width of the border, type, color */
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	-webkit-transition: 0.2s opacity;
+	-o-transition: 0.2s opacity;
+	transition: 0.2s opacity;
+}
+
+.button__container {
+	margin: 20px auto;
+	text-align: center;
+}
+
+button:hover, button:focus,
+.button:hover, .button:focus {
+	/* lets the mouse appear as a hand when hovering over the button */
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.personal__hobbies {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.hobbies__list {
+	list-style-type: none;
+}
+
+.skills__table {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+@-webkit-keyframes color-change {
+	0% {
+		fill: #edc655;
+	}
+	50% {
+		fill: #fcffad;
+	}
+	100% {
+		fill: #f76414;
+	}
+}
+
+@keyframes color-change {
+	0% {
+		fill: #edc655;
+	}
+	50% {
+		fill: #fcffad;
+	}
+	100% {
+		fill: #f76414;
+	}
+}
+
+.sun {
+	-webkit-animation-duration: 4s;
+	        animation-duration: 4s;
+	-webkit-animation-name: color-change;
+	        animation-name: color-change;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	        animation-direction: alternate;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
+} 
+/* This the shorter code: .sun {
+  animation: 4s color-change infinite alternate linear;
+} */
+
+@-webkit-keyframes cloud-move {
+	from {
+		-webkit-transform: translate(0, 50px);
+		        transform: translate(0, 50px);
+	}
+	to {
+		-webkit-transform: translate(200px, 50px);
+		        transform: translate(200px, 50px);
+	}
+}
+
+@keyframes cloud-move {
+	from {
+		-webkit-transform: translate(0, 50px);
+		        transform: translate(0, 50px);
+	}
+	to {
+		-webkit-transform: translate(200px, 50px);
+		        transform: translate(200px, 50px);
+	}
+}
+
+.cloud-front {
+	-webkit-animation-duration: 30s;
+	        animation-duration: 30s;
+	-webkit-animation-name: cloud-move;
+	        animation-name: cloud-move;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	        animation-direction: alternate;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
+}
+/* This the shorter code: .cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+} */
+
+@-webkit-keyframes cloud-move-reverse {
+	from {
+		-webkit-transform: translate(446px, 48px);
+		        transform: translate(446px, 48px);
+	}
+	to {
+		-webkit-transform: translate(100px, 48px);
+		        transform: translate(100px, 48px);
+	}
+}
+
+@keyframes cloud-move-reverse {
+	from {
+		-webkit-transform: translate(446px, 48px);
+		        transform: translate(446px, 48px);
+	}
+	to {
+		-webkit-transform: translate(100px, 48px);
+		        transform: translate(100px, 48px);
+	}
+}
+
+.cloud-back {
+	-webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+	        animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.social-media__image {
+	-webkit-transition: 0.2s opacity;
+	-o-transition: 0.2s opacity;
+	transition: 0.2s opacity;
+}
+
+.social-media__image:hover, .social-media__image:focus {
+	cursor: pointer;
+	opacity: 0.8;
+}
