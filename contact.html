@@ -33,23 +33,23 @@
         </nav>
     </header>
 
-    <h1>Contacts</h1>
+    <h1 class="cantact-header">Contacts</h1>
 
-    <main>
+    <main class="personal__contacts">
         Email:<a href="mailto:amro192@hotmail.it">amro192@hotmail.it</a><br>
         Tel:<a href="tel:+393518289087">+39 3518289087</a><br>
         <a href="mailto:amro192@hotmail.it">Contact</a>
     </main>
 
-    <form action="" method="post" id="contact-form">
+    <form action="" method="post" id="contact-form" class="contact-form">
         <label for="cantact-email">E-mail:</label>
-        <input type="email" id="cantact-email" name="user-email" required>
+        <input type="email" id="cantact-email" class="cantact-email" name="user-email" required>
 
         <label for="contact-phone">Telephone:</label>
-        <input type="tel" name="user-telephone" id="contact-phone">
+        <input type="tel" name="user-telephone" id="contact-phone"><br>
 
         <label for="contact-message">Message:</label>
-        <textarea id="contact-message" required maxlength="240"></textarea>
+        <textarea id="contact-message" class="contact-message" required maxlength="240"></textarea>
 
         <input type="submit" value="send massage">
     </form>
