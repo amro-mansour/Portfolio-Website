@@ -40,7 +40,8 @@ a:visited {
 	color: var(--links-visited);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
 	text-decoration: none;
 }
 
@@ -101,9 +102,10 @@ a:active {
 
 /* start grid fallback */
 .grid__item {
- display: inline-block;
- width: 33%;
+	display: inline-block;
+	width: 33%;
 }
+
 /* end grid fallback */
 
 @supports (display: grid) {
@@ -119,6 +121,7 @@ a:active {
 		width: auto;
 		margin: 0;
 	}
+
 	.grid__item:last-child {
 		grid-column: 3 / 3;
 		grid-row: 1 / 3;
@@ -131,7 +134,7 @@ a:active {
 	}
 }
 
-@media all and (min-width:  500px) and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 750px) {
 	.grid {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -141,16 +144,19 @@ a:active {
 	.grid {
 		grid-gap: 10px;
 	}
+
 	.grid__item:last-child {
 		grid-column: auto / auto;
 		grid-row: auto / auto;
 	}
+
 	h1 {
 		font-size: 22px;
 	}
 }
 
-.button, button {
+.button,
+button {
 	border: none;
 	display: inline-block;
 	font-family: inherit;
@@ -172,8 +178,10 @@ a:active {
 	text-align: center;
 }
 
-button:hover, button:focus,
-.button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
 	/* lets the mouse appear as a hand when hovering over the button */
 	cursor: pointer;
 	opacity: 0.8;
@@ -199,9 +207,11 @@ button:hover, button:focus,
 	0% {
 		fill: #edc655;
 	}
+
 	50% {
 		fill: #fcffad;
 	}
+
 	100% {
 		fill: #f76414;
 	}
@@ -213,7 +223,8 @@ button:hover, button:focus,
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear;
-} 
+}
+
 /* This the shorter code: .sun {
   animation: 4s color-change infinite alternate linear;
 } */
@@ -222,6 +233,7 @@ button:hover, button:focus,
 	from {
 		transform: translate(0, 50px);
 	}
+
 	to {
 		transform: translate(200px, 50px);
 	}
@@ -234,6 +246,7 @@ button:hover, button:focus,
 	animation-direction: alternate;
 	animation-timing-function: linear;
 }
+
 /* This the shorter code: .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 } */
@@ -242,6 +255,7 @@ button:hover, button:focus,
 	from {
 		transform: translate(446px, 48px);
 	}
+
 	to {
 		transform: translate(100px, 48px);
 	}
@@ -255,7 +269,8 @@ button:hover, button:focus,
 	transition: 0.2s opacity;
 }
 
-.social-media__image:hover, .social-media__image:focus {
+.social-media__image:hover,
+.social-media__image:focus {
 	cursor: pointer;
 	opacity: 0.8;
 }

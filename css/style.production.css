@@ -15,7 +15,7 @@ body {
 /*This is added to set the width value for every element to include their padding and border values*/
 * {
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 h1 {
@@ -30,7 +30,8 @@ a:visited {
 	color: #05676e;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
 	text-decoration: none;
 }
 
@@ -52,8 +53,8 @@ a:active {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	text-align: center;
 }
 
@@ -72,14 +73,14 @@ a:active {
 
 .page-header__item {
 	-webkit-box-flex: 0;
-	    -ms-flex: 0 1 200px;
-	        flex: 0 1 200px;
+	-ms-flex: 0 1 200px;
+	flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
 	-webkit-box-flex: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
 	text-align: right;
 }
 
@@ -102,9 +103,10 @@ a:active {
 
 /* start grid fallback */
 .grid__item {
- display: inline-block;
- width: 33%;
+	display: inline-block;
+	width: 33%;
 }
+
 /* end grid fallback */
 
 @supports (display: grid) {
@@ -122,13 +124,14 @@ a:active {
 		width: auto;
 		margin: 0;
 	}
-	.grid__item:last-child {
+
+	/* .grid__item:last-child {
 		-ms-grid-column: 3;
 		grid-column: 3 / 3;
 		-ms-grid-row: 1;
 		-ms-grid-row-span: 2;
 		grid-row: 1 / 3;
-	}
+	} */
 }
 
 @media all and (max-width: 500px) {
@@ -138,7 +141,7 @@ a:active {
 	}
 }
 
-@media all and (min-width:  500px) and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 750px) {
 	.grid {
 		-ms-grid-columns: 1fr 20px 1fr;
 		grid-template-columns: 1fr 1fr;
@@ -149,10 +152,12 @@ a:active {
 	.grid {
 		grid-gap: 10px;
 	}
+
 	.grid__item:last-child {
 		grid-column: auto / auto;
 		grid-row: auto / auto;
 	}
+
 	h1 {
 		font-size: 22px;
 	}
@@ -201,8 +206,10 @@ button {
 	text-align: center;
 }
 
-button:hover, button:focus,
-.button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
 	/* lets the mouse appear as a hand when hovering over the button */
 	cursor: pointer;
 	opacity: 0.8;
@@ -228,9 +235,11 @@ button:hover, button:focus,
 	0% {
 		fill: #edc655;
 	}
+
 	50% {
 		fill: #fcffad;
 	}
+
 	100% {
 		fill: #f76414;
 	}
@@ -240,9 +249,11 @@ button:hover, button:focus,
 	0% {
 		fill: #edc655;
 	}
+
 	50% {
 		fill: #fcffad;
 	}
+
 	100% {
 		fill: #f76414;
 	}
@@ -250,16 +261,17 @@ button:hover, button:focus,
 
 .sun {
 	-webkit-animation-duration: 4s;
-	        animation-duration: 4s;
+	animation-duration: 4s;
 	-webkit-animation-name: color-change;
-	        animation-name: color-change;
+	animation-name: color-change;
 	-webkit-animation-iteration-count: infinite;
-	        animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
-	        animation-direction: alternate;
+	animation-direction: alternate;
 	-webkit-animation-timing-function: linear;
-	        animation-timing-function: linear;
-} 
+	animation-timing-function: linear;
+}
+
 /* This the shorter code: .sun {
   animation: 4s color-change infinite alternate linear;
 } */
@@ -267,37 +279,40 @@ button:hover, button:focus,
 @-webkit-keyframes cloud-move {
 	from {
 		-webkit-transform: translate(0, 50px);
-		        transform: translate(0, 50px);
+		transform: translate(0, 50px);
 	}
+
 	to {
 		-webkit-transform: translate(200px, 50px);
-		        transform: translate(200px, 50px);
+		transform: translate(200px, 50px);
 	}
 }
 
 @keyframes cloud-move {
 	from {
 		-webkit-transform: translate(0, 50px);
-		        transform: translate(0, 50px);
+		transform: translate(0, 50px);
 	}
+
 	to {
 		-webkit-transform: translate(200px, 50px);
-		        transform: translate(200px, 50px);
+		transform: translate(200px, 50px);
 	}
 }
 
 .cloud-front {
 	-webkit-animation-duration: 30s;
-	        animation-duration: 30s;
+	animation-duration: 30s;
 	-webkit-animation-name: cloud-move;
-	        animation-name: cloud-move;
+	animation-name: cloud-move;
 	-webkit-animation-iteration-count: infinite;
-	        animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
-	        animation-direction: alternate;
+	animation-direction: alternate;
 	-webkit-animation-timing-function: linear;
-	        animation-timing-function: linear;
+	animation-timing-function: linear;
 }
+
 /* This the shorter code: .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 } */
@@ -305,28 +320,30 @@ button:hover, button:focus,
 @-webkit-keyframes cloud-move-reverse {
 	from {
 		-webkit-transform: translate(446px, 48px);
-		        transform: translate(446px, 48px);
+		transform: translate(446px, 48px);
 	}
+
 	to {
 		-webkit-transform: translate(100px, 48px);
-		        transform: translate(100px, 48px);
+		transform: translate(100px, 48px);
 	}
 }
 
 @keyframes cloud-move-reverse {
 	from {
 		-webkit-transform: translate(446px, 48px);
-		        transform: translate(446px, 48px);
+		transform: translate(446px, 48px);
 	}
+
 	to {
 		-webkit-transform: translate(100px, 48px);
-		        transform: translate(100px, 48px);
+		transform: translate(100px, 48px);
 	}
 }
 
 .cloud-back {
 	-webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-	        animation: 34s cloud-move-reverse infinite alternate linear;
+	animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 .social-media__image {
@@ -335,7 +352,8 @@ button:hover, button:focus,
 	transition: 0.2s opacity;
 }
 
-.social-media__image:hover, .social-media__image:focus {
+.social-media__image:hover,
+.social-media__image:focus {
 	cursor: pointer;
 	opacity: 0.8;
 }
