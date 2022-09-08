@@ -123,7 +123,6 @@ a:active {
 		padding: 15px;
 		width: auto;
 		margin: 0;
-		padding-bottom: 20px;
 	}
 
 	/* .grid__item:last-child {
@@ -378,4 +377,8 @@ button:focus,
 
 .contact-message {
 	margin-top: 20px;
+}
+
+.project_links {
+	margin-bottom: 20px;
 }
