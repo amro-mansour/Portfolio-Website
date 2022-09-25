@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300;1,400&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@1,300&display=swap"
     rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
@@ -40,76 +40,185 @@
   <main class="personal__hobbies">
     <h1>About</h1>
 
-    <p>This page is about myself. That's what I enjoy doing:</p>
-    <ul class="hobbies__list">
-      <li>Front-end development</li>
-      <li>Back-end development</li>
-      <li>Test driven development</li>
-      <li>Fitness</li>
-      <li>Travels</li>
-    </ul>
-  </main>
-
-  <table class="skills__table">
-    <thead>
-      <tr>
-        <th>Skills</th>
-        <th>Years of experience</th>
-        <th>Level of expertise</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Customer service</td>
-        <td>7</td>
-        <td>Advanced</td>
-      </tr>
-      <tr>
-        <td>Sales</td>
-        <td>3</td>
-        <td>Intermediate</td>
-      </tr>
-      <tr>
-        <td>Team working</td>
-        <td>6</td>
-        <td>Advanced</td>
-      </tr>
-      <tr>
-        <td>HTML</td>
-        <td>1/ 2</td>
-        <td>Beginner</td>
-      </tr>
-      <tr>
-        <td>CSS</td>
-        <td>1/ 2</td>
-        <td>Beginner</td>
-      </tr>
-      <tr>
-        <td>JavaScript</td>
-        <td>/</td>
-        <td>/</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Button to download my CV -->
-  <div class="button__container">
-    <a href="files/amro-mansour-cv.pdf" class="button" download>Download my CV</a>
-  </div>
-
-  <footer class="page-footer">
-    <p>Find me on</p>
-    <div class="social-media">
-      <a href="https://github.com/amro-mansour" target="_blank"><img src="./img/githubicon.svg" alt="github-account"
-          class="social-media__image"></a>
-
-      <a href="https://www.linkedin.com/in/amro-mansour-6b7151175/" target="_blank"><img src="./img/linkedinicon.svg"
-          alt="linkedin-account" class="social-media__image"></a>
+    <div>
+      <p>Hi, I’m Amro. I’m a developer with a background in economics. Where I pursued a bachelor degree and gained
+        valuable technical and analytical skills. I’ve always had a passion for tech and especially in the processes
+        that go behind the making of digital products, such mobile and web applications. </p>
+      <p>My past work experiences were mainly in sales and customer service. These experiences allowed me to have a
+        unique perspective on customers' main pain points and requirements. As a developer I’d love to be involved in
+        solving programming issues by always keeping the customers needs in mind during the development process, which
+        hopefully would result in more interactive and usable digital products.</p>
     </div>
-  </footer>
-  <!-- the target="_blank" is needed to open those links in another webpage -->
 
-  <script src="js/tota11y.min.js"></script>
+    <!-- <table class="skills__table">
+      <thead>
+        <tr>
+          <th>SKILLS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Customer service</td>
+        </tr>
+        <tr>
+          <td>Sales</td>
+        </tr>
+        <tr>
+          <td>Team working</td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+        </tr>
+      </tbody>
+    </table> -->
+
+    <!-- Button to download my CV -->
+    <div class="button__container">
+      <a href="files/amro-mansour-cv.pdf" class="button" download>Download my CV</a>
+    </div>
+
+    <div class="center-flexbox__item">
+      <table class="skills skills__table">
+        <thead>
+          <tr>
+            <th>SKILLS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table_section">
+            <td>Front-end:</td>
+          </tr>
+          <tr>
+            <td>HTML</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td>SASS</td>
+          </tr>
+          <tr>
+            <td>Bootstrap</td>
+          </tr>
+          <tr>
+            <td>jQuery</td>
+          </tr>
+          <tr>
+            <td>Google Material</td>
+          </tr>
+          <tr class="table_section">
+            <td>Programming Languages:</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+          </tr>
+          <tr>
+            <td>TypeScript</td>
+          </tr>
+          <tr class="table_section">
+            <td>JS Frameworks:</td>
+          </tr>
+          <tr>
+            <td>React</td>
+          </tr>
+          <tr>
+            <td>React native</td>
+          </tr>
+          <tr>
+            <td>Node.js</td>
+          </tr>
+          <tr>
+            <td>Angular</td>
+          </tr>
+          <tr>
+            <td>Express</td>
+          </tr>
+          <tr>
+            <td>Redux</td>
+          </tr>
+          <tr class="table_section">
+            <td>Databases:</td>
+          </tr>
+          <tr>
+            <td>MongoDB</td>
+          </tr>
+          <tr>
+            <td>PostgreSQL</td>
+          </tr>
+          <tr>
+            <td>MySQL</td>
+          </tr>
+          <tr class="table_section">
+            <td>Tesing tools:</td>
+          </tr>
+          <tr>
+            <td>Jest</td>
+          </tr>
+          <tr>
+            <td>Puppeteer</td>
+          </tr>
+          <tr class="table_section">
+            <td>Documentation tools:</td>
+          </tr>
+          <tr>
+            <td>TypeDoc</td>
+          </tr>
+          <tr>
+            <td>JSDoc</td>
+          </tr>
+          <tr class="table_section">
+            <td>Cloud:</td>
+          </tr>
+          <tr>
+            <td>Google Firebase</td>
+          </tr>
+          <tr>
+            <td>AWS Lambda</td>
+          </tr>
+          <tr>
+            <td>Serverless Hosting</td>
+          </tr>
+          <tr>
+            <td>Automated deployment</td>
+          </tr>
+          <tr class="table_section">
+            <td>Others:</td>
+          </tr>
+          <tr>
+            <td>PWA</td>
+          </tr>
+          <tr>
+            <td>Parcel-Bundler</td>
+          </tr>
+          <tr>
+            <td>GIT version control</td>
+          </tr>
+          <tr>
+            <td>Postman</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="page-footer">
+      <p>Find me on</p>
+      <div class="social-media">
+        <a href="https://github.com/amro-mansour" target="_blank"><img src="./img/githubicon.svg" alt="github-account"
+            class="social-media__image"></a>
+
+        <a href="https://www.linkedin.com/in/amro-mansour-6b7151175/" target="_blank"><img src="./img/linkedinicon.svg"
+            alt="linkedin-account" class="social-media__image"></a>
+      </div>
+    </footer>
+    <!-- the target="_blank" is needed to open those links in another webpage -->
+
+    <script src="js/tota11y.min.js"></script>
 
 </body>
 
