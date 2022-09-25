@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <title>Work of Amro Mansour</title>
     <link rel="shortcut icon" type="text/css" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300;1,400&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@1,300&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
@@ -53,8 +55,13 @@
                 <div class="project_links">
                     <a href="https://github.com/amro-mansour/myFlix-client/tree/Final-Task-3.8" target="_blank">See
                         project
-                        on Github</a>
+                        on Github</a><br>
+
+                    <!-- Modal button -->
+                    <button type="button" class="btn btn-link button-modal" data-toggle="modal"
+                        data-target=".bd-example-modal-lg">MyFlix App Case Study</button>
                 </div>
+
             </div>
             <div class="grid__item">
                 <h2>Pokdex App</h2>
@@ -147,7 +154,106 @@
     </footer>
     <!-- the target="_blank" is needed to open those links in another webpage -->
 
+    <!-- ************************************ Case-Study Modal ************************************************ -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content case-study_modal">
+
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Case study of myFlix full-stack web
+                        application</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <h3 class="headers">Overview</h3>
+                <p>myFlix is a movie library, full-stack web application built with the MERN stack. The
+                    app allows users once registered and logged in to view the list of movies present in
+                    the database, create a list of their favourite movies and view information about the
+                    different directors and genres. Finally users can also decide to deregister from the
+                    application.</p>
+                <img src="./img/myFlix-React-Screenshot.png" alt="MyFlix-App screenshot" width="100%" height="45%">
+                <h3 class="headers">Purpose and Context</h3>
+                <p>The project was part of my careerfoundry web development bootcamp. The aim was to
+                    demonstrate my ability to create a full stack application using JavaScript
+                    programming language. Also, myFlix application was the perfect project for myself
+                    because of my passion for movies. Therefore I was very enthusiastic to develop the
+                    app and showcase it to fellow developers and film enthusiasts.</p>
+                <h3 class="headers">Objective</h3>
+                <p>The objective of the project was to build a full-stack application from scratch using
+                    the
+                    MERN stack to showcase my skills to potential employers. The project started by
+                    building
+                    the database and back-end of the application with the use of MongoDB, Node.js and
+                    Express. The client-side on the other hand was developed using React.js. </p>
+
+                <h2 class="approach-header">Approach</h2>
+                <h3 class="headers">Back-end</h3>
+                <p>First, I used Node.js and Express to create a RESTful API that would interact with
+                    the
+                    movies database, which was created using a non-relational database (MongoDB). The
+                    database contains two collections: movies, which contains all movies and their
+                    relative
+                    information (synopsis, genre and director); users, which contains the list of all
+                    registered users and their personal information.</p>
+                <p>The API can be accessed via HTTP methods (GET, PUT, POST, DELETE). In order to
+                    interact
+                    with the database and be able to store and retrieve data, I made use of CRUD methods
+                    (mainly using Create, Read, Update, and Delete). Finally the data returned from the
+                    database is in a JSON format.</p>
+
+                <div>
+                    <img src="./img/Postman-Screenshot.png" class="postman__portrait" alt="postman screenshot"
+                        width="60%" height="60%">
+                    <p>To test the application in the development phase, I used Postman. For authentication
+                        and
+                        authorization, I used HTTP and JWT tokens. The API was then hosted on Heroku.
+                    </p>
+                </div>
+
+                <h3 class="headers">Front-end</h3>
+
+                <p>Regarding the front-end of the application, it is a single page application built
+                    with React.js. The application provides the user with several views that include a
+                    login view, a registration view, a main view (displays all movies in the database),
+                    a movie view (displays information about a single movie), a genre view (displays
+                    information about a specific genre), a director view (displays information about a
+                    specific director) and a profile view (displays personal information about the
+                    logged in user, that can also be updated).</p>
+                <img src="./img/Profile-Screenshot.png" class="profile_portrait" alt="MyFlix-App screenshot" width="60%"
+                    height="30%">
+                <h3 class="headers">Challenges</h3>
+                <p>This was definitely one of my favourite projects and most challenging too. Before
+                    working on this project, I had not worked on projects involving building the
+                    back-end of an application, so it was very rewarding building my own API and
+                    database at the same time. Also I got pretty good at using the terminal.</p>
+                <p>In regards to the front-end, it was my first time working with React and to be honest
+                    it took me a while to comprehend how the state and props of a component function and
+                    how to manipulate them, but thankfully after getting some practice and watching some
+                    useful tutorials online, I managed to complete the app successfully.</p>
+                <h3 class="headers">Duration</h3>
+                <p>It took a little over two month to complete the entire application.</p>
+                <h3 class="headers">Credits</h3>
+                <p>Role: Lead Developer</p>
+                <p>Tutor: Adewunmi Bamishigbin</p>
+                <p>Mentor: Akunna Nwosu</p>
+            </div>
+        </div>
+    </div>
+
     <script src="js/tota11y.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 
